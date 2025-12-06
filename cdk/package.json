@@ -1,0 +1,17 @@
+{
+    "name": "pipeline-example",
+    "version": "1.0.0",
+    "bin": {
+      "pipeline-example": "bin/main.js"
+    },
+    "scripts": {
+      "build": "tsc",
+      "cdk": "cdk"
+    },
+    "devDependencies": {
+      "aws-cdk-lib": "2.150.0",
+      "constructs": "10.3.0",
+      "typescript": "^5.0.0"
+    }
+  }
+  
