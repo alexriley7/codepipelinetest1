@@ -1,0 +1,180 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "SimplePipelineStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "SimplePipelineStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "SimplePipelineStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "SimplePipelineStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1b878d31b87f00984ed68e953690a12719a36af2e39207c5ff917e42a760bd36.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "SimplePipelineStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "SimplePipelineStack.assets"
+      ],
+      "metadata": {
+        "/SimplePipelineStack/BuildProject/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildProjectRoleAA92C755"
+          }
+        ],
+        "/SimplePipelineStack/BuildProject/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildProjectRoleDefaultPolicy3E9F248C"
+          }
+        ],
+        "/SimplePipelineStack/BuildProject/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BuildProject097C5DB7"
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "V1 pipeline type is implicitly selected when `pipelineType` is not set. If you want to use V2 type, set `PipelineType.V2`. [ack: @aws-cdk/aws-codepipeline:unspecifiedPipelineType]",
+            "trace": [
+              "Annotations.addMessage (/home/alex/Documents/Projects/codepipeline_test/cdk/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/home/alex/Documents/Projects/codepipeline_test/cdk/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new Pipeline (/home/alex/Documents/Projects/codepipeline_test/cdk/node_modules/aws-cdk-lib/aws-codepipeline/lib/pipeline.js:1:6677)",
+              "new PipelineStack (/home/alex/Documents/Projects/codepipeline_test/cdk/dist/lib/pipeline-stack.js:55:26)",
+              "Object.<anonymous> (/home/alex/Documents/Projects/codepipeline_test/cdk/dist/bin/main.js:40:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1529:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1613:10)",
+              "Module.load (node:internal/modules/cjs/loader:1275:32)",
+              "Module._load (node:internal/modules/cjs/loader:1096:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)",
+              "node:internal/main/run_main_module:28:49"
+            ]
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline/ArtifactsBucketEncryptionKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SimplePipelineArtifactsBucketEncryptionKey69312C56"
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline/ArtifactsBucketEncryptionKeyAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SimplePipelineArtifactsBucketEncryptionKeyAliasD8E3253D"
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SimplePipelineArtifactsBucket1127BA6F"
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline/ArtifactsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SimplePipelineArtifactsBucketPolicyA6DBC67E"
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SimplePipelineRole55849F2D"
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SimplePipelineRoleDefaultPolicy04149DC1"
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SimplePipelineCF6B26BF"
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline/Source/GitHub_Source/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SimplePipelineSourceGitHubSourceCodePipelineActionRole71FDAF9E"
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline/Source/GitHub_Source/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SimplePipelineSourceGitHubSourceCodePipelineActionRoleDefaultPolicyF8EA568E"
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline/Build/Run_Build/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SimplePipelineBuildRunBuildCodePipelineActionRole23DF6407"
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline/Build/Run_Build/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SimplePipelineBuildRunBuildCodePipelineActionRoleDefaultPolicy5127443B"
+          }
+        ],
+        "/SimplePipelineStack/SimplePipeline/Deploy/Approve/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SimplePipelineDeployApproveCodePipelineActionRole0F80478C"
+          }
+        ],
+        "/SimplePipelineStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/SimplePipelineStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/SimplePipelineStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/SimplePipelineStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "SimplePipelineStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
 {
-    "app": "node bin/main.js"
+    "app": "node dist/bin/main.js"
   }
   
