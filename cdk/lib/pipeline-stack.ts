@@ -87,6 +87,8 @@ export class PipelineStack extends cdk.Stack {
     // --------------
     const buildOutput = new codepipeline.Artifact();
 
+    const buildOutput2 = new codepipeline.Artifact();
+
     pipeline.addStage({
       stageName: 'Build',
       actions: [
@@ -107,7 +109,9 @@ export class PipelineStack extends cdk.Stack {
         new actions.CodeBuildAction({
           actionName: "S3BucketCreate",
           project: project,
-          input: sourceOutput,   // same source output from GitHub
+          input: [buildOutput],
+          outputs: [buildOutput2]
+             // same source output from GitHub
         }),
       ],
     });
