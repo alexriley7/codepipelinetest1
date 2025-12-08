@@ -99,17 +99,6 @@ export class PipelineStack extends cdk.Stack {
       ]
     });
 
-    // ---------------
-    // 3️⃣ DEPLOY STAGE (dummy)
-    // ---------------
-    pipeline.addStage({
-      stageName: 'Deploy',
-      actions: [
-        new actions.ManualApprovalAction({
-          actionName: 'Approve',
-        })
-      ]
-    });
 
 
     pipeline.addStage({
@@ -121,6 +110,19 @@ export class PipelineStack extends cdk.Stack {
           input: sourceOutput,   // same source output from GitHub
         }),
       ],
+    });
+
+
+        // ---------------
+    // 3️⃣ DEPLOY STAGE (dummy)
+    // ---------------
+    pipeline.addStage({
+      stageName: 'Deploy',
+      actions: [
+        new actions.ManualApprovalAction({
+          actionName: 'Approve',
+        })
+      ]
     });
 
 
