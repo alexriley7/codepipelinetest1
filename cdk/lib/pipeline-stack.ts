@@ -114,7 +114,7 @@ export class PipelineStack extends cdk.Stack {
 
 
         // ---------------
-    // 3️⃣ DEPLOY STAGE (dummy)
+    // 3️⃣ DEPLOY STAGE (dummy))
     // ---------------
     pipeline.addStage({
       stageName: 'Deploy',
