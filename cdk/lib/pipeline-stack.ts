@@ -111,7 +111,7 @@ export class PipelineStack extends cdk.Stack {
           project: project,
           input: [buildOutput],
           outputs: [buildOutput2]
-             // same source output from GitHub
+             // same source output from GitHubs
         }),
       ],
     });
